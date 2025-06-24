@@ -1,0 +1,155 @@
+*{
+    /* Global Styles */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* if you have box sizing if you have 100px width when u add a 10px padding 
+    horizontal/vertical it will always end up 100 */
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: sans-serif;
+    background-color:#f5efe6;
+    
+}
+
+
+.container{
+    background-color:white;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 25px 35px;
+    overflow: hidden;
+    position: relative;
+    max-width: 620px;
+    width: 100%;
+}
+
+.screen{
+    display: none;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.screen.active{
+    display: block;
+}
+
+/* Start-Screen */
+#start-screen h1{
+    color: #e86a33;
+    margin-bottom: 20px;
+    
+}
+
+#start-screen p {
+    color: #666;
+}
+
+/* Question Form */
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+
+#quiz-results button, 
+#start-screen button {
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #e86a33;
+    color: white;
+    margin-top: 20px;
+    transition: 0.5 ease;
+}
+
+#quiz-results button,
+ #start-screen button:hover{
+   background-color: #d45b28;
+}
+
+/* answer buttons */
+
+#answer-buttons{
+   display: flex;
+   flex-direction: column;
+   align-items: baseline;
+   gap: 10px;
+   margin-top: 15px;
+   max-width: 600px;
+   width: 100%;
+   overflow: hidden;
+   box-sizing: border-box;
+}
+
+
+#answer-buttons button{
+    width: 100%;
+    height: 35px;
+    text-align: left;
+    border-radius: 5px;
+    border: 2px solid #eadbc8;
+    color: #333;
+    background-color: #f8f0e5;
+    padding: 0.5rem;
+    transition: 0.3s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#answer-buttons button:hover{
+   background-color: #eadbc8;
+  border-color: #dac0ae;
+}
+
+#answer-buttons button.correct {
+  background-color: #e6fff0;
+  border-color: #a3f0c4;
+  color: #28a745;
+}
+
+#answer-buttons button.incorrect {
+  background-color: #fff0f0;
+  border-color: #ffbdbd;
+  color: #dc3545;
+}
+
+/* Progress Bar */
+.progress-bar{
+    background-color: #f8f0e5;
+    height: 15px;
+    margin-top: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress{
+    background-color: #d45b28;
+    width: 0%;
+    transition: width 0.3s ease;
+    height: 100%;
+}
+
+
+/* Quiz Results */
+.screen h1{
+    color: #d45b28;
+}
+
+.screen-container{
+    background-color: #f8f0e5;
+    padding: 35px 45px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px 20px;
+}
+
